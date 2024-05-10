@@ -6,6 +6,7 @@ WORKDIR /usr/src
 RUN yum groupinstall "Development Tools" -y
 RUN yum install cmake3 -y
 RUN yum install iptables -y
+RUN yum install iproute-tc -y
 RUN cmake3 . && make
 RUN yum groupremove "Development Tools" -y
 RUN yum clean all
