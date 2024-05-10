@@ -12,6 +12,8 @@ RUN yum groupremove "Development Tools" -y
 RUN yum clean all
 RUN rm -rf /var/cache/yum
 
+ENV SCRIPT_NAME=create-passthrough.sh
+
 EXPOSE 8008
 
 CMD ./gwlbtun -c example-scripts/$SCRIPT_NAME -p 8008
