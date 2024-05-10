@@ -14,4 +14,4 @@ RUN rm -rf /var/cache/yum
 
 EXPOSE 8008
 
-CMD ./gwlbtun -c example-scripts/create-passthrough.sh -p 8008
+CMD ./gwlbtun -c example-scripts/$SCRIPT_NAME -p 8008
