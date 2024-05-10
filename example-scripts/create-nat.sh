@@ -8,8 +8,8 @@ echo Mode is $1, In Int is $2, Out Int is $3, ENI is $4
 
 iptables -F
 iptables -t nat -F
-iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-iptables -A FORWARD -i $2 -o eth0 -j ACCEPT
+iptables -t nat -A POSTROUTING -o enX0 -j MASQUERADE
+iptables -A FORWARD -i $2 -o enX0 -j ACCEPT
 
 echo 1 > /proc/sys/net/ipv4/ip_forward
 echo 0 > /proc/sys/net/ipv4/conf/all/rp_filter
