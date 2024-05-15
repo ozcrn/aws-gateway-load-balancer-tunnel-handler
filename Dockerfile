@@ -10,7 +10,7 @@ RUN yum groupremove "Development Tools" -y
 RUN yum clean all
 RUN rm -rf /var/cache/yum
 
-ENV SCRIPT_NAME=create-passthrough.sh
+ENV SCRIPT_NAME=combo-routing.sh
 
 EXPOSE 8008
 
